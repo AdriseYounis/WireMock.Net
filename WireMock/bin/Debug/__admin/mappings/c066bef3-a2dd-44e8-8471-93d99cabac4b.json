@@ -1,0 +1,117 @@
+{
+  "Guid": "c066bef3-a2dd-44e8-8471-93d99cabac4b",
+  "Title": "",
+  "Request": {
+    "Path": {
+      "Matchers": [
+        {
+          "Name": "WildcardMatcher",
+          "Pattern": "/",
+          "IgnoreCase": false
+        }
+      ]
+    },
+    "Methods": [
+      "POST"
+    ],
+    "Headers": [
+      {
+        "Name": "Cache-Control",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "no-cache",
+            "IgnoreCase": true
+          }
+        ]
+      },
+      {
+        "Name": "Connection",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "keep-alive",
+            "IgnoreCase": true
+          }
+        ]
+      },
+      {
+        "Name": "Accept",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "*/*",
+            "IgnoreCase": true
+          }
+        ]
+      },
+      {
+        "Name": "Accept-Encoding",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "gzip, deflate",
+            "IgnoreCase": true
+          }
+        ]
+      },
+      {
+        "Name": "Host",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "localhost:9095",
+            "IgnoreCase": true
+          }
+        ]
+      },
+      {
+        "Name": "User-Agent",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "PostmanRuntime/7.15.2",
+            "IgnoreCase": true
+          }
+        ]
+      },
+      {
+        "Name": "Content-Length",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "0",
+            "IgnoreCase": true
+          }
+        ]
+      },
+      {
+        "Name": "Postman-Token",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "302e2073-590b-42b3-9084-7091580388e2",
+            "IgnoreCase": true
+          }
+        ]
+      }
+    ],
+    "Body": {
+      "Matcher": {
+        "Name": "ExactMatcher",
+        "Pattern": ""
+      }
+    }
+  },
+  "Response": {
+    "StatusCode": 200,
+    "Body": "<?xml version=\"1.0\"?>\r\n<transaction-results xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <transaction-id>76a648a3-92b8-470c-b357-26b5ef345eb1</transaction-id>\r\n  <cross-reference>d374bda3-3e37-4d9a-90aa-c85b25b92e56</cross-reference>\r\n  <rules-tripped />\r\n  <total-score>-5000</total-score>\r\n  <recommendation-code>Accept</recommendation-code>\r\n  <remarks>Primary result from Accertify Stub</remarks>\r\n</transaction-results>",
+    "Headers": {
+      "Content-Type": "application/xml; charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Request-Context": "appId=cid-v1:0fa06955-ad50-49e6-a886-82672320a038",
+      "Date": "Tue, 23 Jul 2019 15:10:52 GMT",
+      "Server": "Kestrel"
+    }
+  }
+}
