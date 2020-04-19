@@ -1,5 +1,5 @@
 # WireMock
-Stubbing External APIs in Unit Tests
+Stubbing External APIs
 
 # What Is WireMock?
 WireMock is a tool which mimics the behaviour of an HTTP API, it captures the HTTP requests and sends it to WireMock HTTP server, which is started and as a result, we can setup expectations, call the service and then verify its behaviour.
