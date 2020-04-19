@@ -9,7 +9,7 @@ Below are three situations when we should use WireMock:
 
 #### 1.	`HTTP Dependencies Not Ready`
 
-An engineering team needs to implement a feature which uses an HTTP API that is not ready which occurs often in an microservice architecture.
+An engineering team needs to implement a feature which uses an HTTP API that is not ready, this occurs often in an microservice based architecture.
 
 To avoid engineering waste, you can mimic the behaviour of the HTTP API using WireMock and then replace the call to WireMock API to the actual API. 
 
