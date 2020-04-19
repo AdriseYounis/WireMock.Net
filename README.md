@@ -7,12 +7,13 @@ WireMock is a tool which mimics the behaviour of an HTTP API, it captures the HT
 # When Should We Use WireMock?
 Below are three situations when we should use WireMock:
 
-`1.	HTTP Dependencies Not Ready`
+#### 1.	`HTTP Dependencies Not Ready`
+
 An engineering team needs to implement a feature which uses an HTTP API that is not ready which occurs often in an microservice architecture.
 
 To avoid engineering waste, you can mimic the behaviour of the HTTP API using WireMock and then replace the call to WireMock API to the actual API. 
 
-`2.	Unit Test classes which use HTTP APIs`
+#### 2.	`Unit Test classes which use HTTP APIs`
 
 Scenario: `Class A -> depends on -> Class B -> depends on -> HTTP API`
 
@@ -25,7 +26,7 @@ However, if the API client is written by you, using a mock object is not a good 
 `Sociable Tests`
 Therefore, Class A & Class B should be tested as one unit and as a result we can verify that the correct information is send to the HTTP API and ensure that all legal responses can be processed by both Class A & Class B.
 
-`3.	Integration or End-to-end tests using external HTTP APIs`
+#### 3.	`Integration or End-to-end tests using external HTTP APIs`
 
 `Dependency Down`
 External HTTP API cannot initialise into a known state before the tests are run. Therefore, we cannot write tests which use the data returned by the external HTTP API, as it can differ.
