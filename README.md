@@ -24,22 +24,26 @@ Option1: Replace depend Class B with a MockObject when unit testing Class A.
 However, if the API client is written by you, using a mock object is not a good choice because it does not allow us to verify that our code can communicate with the HTTP API. 
 
 `Sociable Tests`
+
 Therefore, Class A & Class B should be tested as one unit and as a result we can verify that the correct information is send to the HTTP API and ensure that all legal responses can be processed by both Class A & Class B.
 
 #### 3.	`Integration or End-to-end tests using external HTTP APIs`
 
 `Dependency Down`
+
 External HTTP API cannot initialise into a known state before the tests are run. Therefore, we cannot write tests which use the data returned by the external HTTP API, as it can differ.
 
 `Slow tests` 
+
 External HTTP API takes longer than getting the same response from WireMock and we cannot use a short timeout because the test will fail, when the call is timed out.
 
 `API Requests Blocked`
+
 Wrong network connection, the API request which does not come from a known IP address is blocked.
 
-To write fast and consistent tests for HTTP APIs we should be using WireMock.
+##### To write fast and consistent tests for HTTP APIs we should be using WireMock.
 
-However, WireMock cannot guarantee that our application is compatible with the used HTTP API. 
+##### However, WireMock cannot guarantee that our application is compatible with the consumed HTTP API. 
 
 The WireMock tests will ensure 
 1.	Our application sends the expected requests to the used HTTP API.
